@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: JrkOAPR8w931KWvCx2kpBN/rK6CYpXpuFBbYEK8LuV7gkJRBYdRakFIwPKQ92Kt8xIK3lPQU8gnDFxLWkfTrbiZfsCchUkuvAQHI7yXOVzGApkaIVHtdujPK2KbotZEpVuSzLy2AdO65r9HC46b2A3GZ0SyEl4fLtebyw3A5RtKfXmgzx/3ZGEQXeD8Q/ZVyF1ikNRMEUgC4BTTn7/5REU/+D76FmD840HaWgzpl4j5/tELt8AHJib4Y6SAiqCILJuiV+03+97DKXFYxgaid6ZsMvYwSYOo2+MRURx632gqa40IMhhOWt2pW7JL3wRC1OxCWq7WJxNODVHVaddFHmDiZcqlo+A2m4n/eU9aZtX0rSId26AuAtmCYf9HzZSJLPh72SNEQEYOUI4ZZb/BRaav/XgUFEsQhXfC5+2WKU42DUaXrMvyXc5ZM3jhSPwuPK893s05D+3SoBNqtD5ovUvjsLxS5CgV4dV+ZfoNFMVvPMeh3PaPmqw/JDJtjOv6heJKBC+HjlOwQNcwwPtbQL8b18M1ojao25Hlg6kwqhvxUZ1U6Kvf/VHt1L5MM1Zd4spESRh7L/hDzg2xuMPQvIULiieF9gjDfx9bFms+MSXyqsqGwbPR9n7rRXsZnd0FA9sFBALXGn262hfHR2+FLLx+dwxK3jkDatjQb7A7e57U=
+  app: peaceful-shore-33617
+  on:
+    repo: avatarmh/node-shopping-list-integration-tests
