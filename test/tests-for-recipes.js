@@ -85,6 +85,28 @@ describe('Recipes', function() {
   });
 
   // test strategy:
+  //  1. make a POST request with data for a new item but omit a key (and its value)
+  //  2. inspect response object and prove it is wrong
+  //  status code and that the returned object has an `id`
+//   it('should generate a status code 422 when one or more keys are missing on POST', function() {
+//     const newItem = {name: 'coddled eggs'};
+//     return chai.request(app)
+//       .post('/recipes')
+//       .send(newItem)
+//       .then(function(res) {
+//         expect(res).to.have.status(422);
+        // expect(res).to.be.json;
+        // expect(res.body).to.be.a('object');
+        // expect(res.body).to.include.keys('id', 'name', 'ingredients');
+        // expect(res.body.name).to.be.equal(newItem.name);
+        // expect(res.body.ingredients).to.be.a('array');
+        // response should be deep equal to `newItem` from above if we assign
+        // `id` to it from `res.body.id`
+//         // expect(res.body).to.deep.equal(Object.assign(newItem, {id: res.body.id}));
+//       });
+//   });
+  
+  // test strategy:
   //  1. initialize some update data (we won't have an `id` yet)
   //  2. make a GET request so we can get an item to update (because there's no db)
   //  3. add the `id` to `updateData`
@@ -119,9 +141,6 @@ describe('Recipes', function() {
       // and returns updated item
       .then(function(res) {
         expect(res).to.have.status(204);
-        //expect(res).to.be.json;
-        expect(res.body).to.be.a('object');
-        //expect(res.body).to.deep.equal(updateData);
       });
   });
 
